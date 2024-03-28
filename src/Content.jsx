@@ -41,7 +41,7 @@ export default function Allcontent() {
   ];
   let getData = async () => {
     let res = await axios.get(
-      `http://api.aladhan.com/v1/timingsByCity?city=${city.apiName}&country=EG&method=5`
+      `https://api.aladhan.com/v1/timingsByCity?city=${city.apiName}&country=EG&method=5`
     );
     setPrayerTimes(res.data.data.timings);
     setHijriDate(res.data.data.date.hijri);

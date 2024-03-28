@@ -211,19 +211,19 @@ export default function Allcontent() {
           <Prayer
             name="الفجر"
             time={prayerTimes.Fajr}
-            img="src/assets/images/mosque1.jpg"
+            img="https://3.bp.blogspot.com/-DUTAcPtGDlQ/WBcJsGMGD_I/AAAAAAAAEsg/fVDkQjfW9FIbr0N7YF25TRMWP1Ur1virQCLcB/s640/%25D8%25AC%25D8%25A7%25D9%2585%25D8%25B9-%25D8%25A7%25D9%2584%25D8%25B3%25D9%2584%25D8%25B7%25D8%25A7%25D9%2586-%25D8%25A3%25D8%25AD%25D9%2585%25D8%25AF-%25D8%25A3%25D9%2588-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25A7%25D9%2585%25D8%25B9-%25D8%25A7%25D9%2584%25D8%25A3%25D8%25B2%25D8%25B1%25D9%2582.jpg"
             active={nextPrayerIndex === 0}
           />
           <Prayer
             name="الظهر"
             time={prayerTimes.Dhuhr}
-            img="src/assets/images/mosque2.jpg"
+            img="https://3.bp.blogspot.com/-FOTBHJGVV5o/WBcLbWxpHRI/AAAAAAAAEtA/SmgrRoLwSs4MPVOANoPKDs7-nQalyi39wCLcB/s640/%25D9%2585%25D9%2586%25D8%25B8%25D8%25B1-%25D9%2584%25D9%2584%25D8%25AC%25D8%25A7%25D9%2585%25D8%25B9-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25AF%25D9%258A%25D8%25AF-%25D8%25A3%25D9%2588-%25D9%258A%25D9%2586%25D9%258A-%25D8%25AC%25D8%25A7%25D9%2585%25D8%25B9.jpg"
             active={nextPrayerIndex === 1}
           />
           <Prayer
             name="العصر"
             time={parseInt(prayerTimes.Asr) - 12 + prayerTimes.Asr.slice(2)}
-            img="src/assets/images/mosque3.jpg"
+            img="https://3.bp.blogspot.com/-17nulNcODHA/WBcLvMRPLaI/AAAAAAAAEtI/k-7V27xKG9EnSa2__2A0wgnfNqF1F_e3wCLcB/s640/%25D8%25B5%25D9%2588%25D8%25B1%25D8%25A9-%25D9%2585%25D9%2586-%25D8%25AF%25D8%25A7%25D8%25AE%25D9%2584-%25D9%2585%25D8%25B3%25D8%25AC%25D8%25AF-%25D8%25A8%25D9%258A%25D8%25A7%25D8%25B2%25D9%258A%25D8%25AF.jpg"
             active={nextPrayerIndex === 2}
           />
           <Prayer
@@ -231,13 +231,13 @@ export default function Allcontent() {
             time={
               parseInt(prayerTimes.Maghrib) - 12 + prayerTimes.Maghrib.slice(2)
             }
-            img="src/assets/images/mosque4.jpg"
+            img="https://2.bp.blogspot.com/-lhPyYUBDQ_c/WBcKTY3o6DI/AAAAAAAAEso/pbb-oqUF4zkqTIdZEDUNhr4bw0wRxlDzgCLcB/s640/%25D9%2585%25D8%25B3%25D8%25AC%25D8%25AF-%25D9%2583%25D9%2588%25D9%2583%25D8%25A7%25D8%25AA%25D9%258A%25D8%25A8-%25D8%25A3%25D9%2586%25D9%2582%25D8%25B1%25D8%25A9.jpg"
             active={nextPrayerIndex === 3}
           />
           <Prayer
             name="العشاء"
             time={parseInt(prayerTimes.Isha) - 12 + prayerTimes.Isha.slice(2)}
-            img="src/assets/images/mosque5.jpg"
+            img="https://4.bp.blogspot.com/-dNPgu1uR2v8/WBcJ_5FuhlI/AAAAAAAAEsk/RAs7DeTK-KQ23hNQwJH0ORAesEejixhKQCLcB/s640/%25D8%25AC%25D8%25A7%25D9%2585%25D8%25B9-%25D8%25A7%25D9%2584%25D8%25B3%25D9%2584%25D9%258A%25D9%2585%25D8%25A7%25D9%2586%25D9%258A%25D8%25A9.jpg"
             active={nextPrayerIndex === 4}
           />
         </Stack>

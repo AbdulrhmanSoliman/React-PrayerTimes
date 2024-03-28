@@ -29,7 +29,13 @@ export default function Allcontent() {
   });
   let [today, setToday] = useState("");
   let [hour, setHour] = useState("");
-  let [hijriDate, setHijriDate] = useState({});
+  let [hijriDate, setHijriDate] = useState({
+    day: "01",
+    month: {
+      ar: "رَمَضان",
+    },
+    year: "1439",
+  });
   let [nextPrayerIndex, setNextPrayerIndex] = useState("0");
   let [remainTime, setRemainTime] = useState({});
   let prayersArray = [
@@ -239,4 +245,3 @@ export default function Allcontent() {
     </Stack>
   );
 }
-// 9 سبتمبر 2024 | 4:50

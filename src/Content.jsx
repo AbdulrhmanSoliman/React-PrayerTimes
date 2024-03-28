@@ -211,19 +211,19 @@ export default function Allcontent() {
           <Prayer
             name="الفجر"
             time={prayerTimes.Fajr}
-            img="./src/assets/images/جامع-السلطان-أحمد-أو-الجامع-الأزرق.jpg"
+            img="./src/assets/images/mosque1.jpg"
             active={nextPrayerIndex === 0}
           />
           <Prayer
             name="الظهر"
             time={prayerTimes.Dhuhr}
-            img="./src/assets/images/منظر-للجامع-الجديد-أو-يني-جامع.jpg"
+            img="./src/assets/images/mosque2.jpg"
             active={nextPrayerIndex === 1}
           />
           <Prayer
             name="العصر"
             time={parseInt(prayerTimes.Asr) - 12 + prayerTimes.Asr.slice(2)}
-            img="./src/assets/images/صورة-من-داخل-مسجد-بيازيد.jpg"
+            img="./src/assets/images/mosque3.jpg"
             active={nextPrayerIndex === 2}
           />
           <Prayer
@@ -231,13 +231,13 @@ export default function Allcontent() {
             time={
               parseInt(prayerTimes.Maghrib) - 12 + prayerTimes.Maghrib.slice(2)
             }
-            img="./src/assets/images/مسجد-كوكاتيب-أنقرة.jpg"
+            img="./src/assets/images/mosque4.jpg"
             active={nextPrayerIndex === 3}
           />
           <Prayer
             name="العشاء"
             time={parseInt(prayerTimes.Isha) - 12 + prayerTimes.Isha.slice(2)}
-            img="./src/assets/images/جامع-السليمانية.jpg"
+            img="./src/assets/images/mosque5.jpg"
             active={nextPrayerIndex === 4}
           />
         </Stack>

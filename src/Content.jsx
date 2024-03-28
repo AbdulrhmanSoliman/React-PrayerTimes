@@ -18,12 +18,18 @@ export default function Allcontent() {
   // States
   let [prayerTimes, setPrayerTimes] = useState({
     Fajr: "4:20",
+    Dhuhr: "12:00",
+    Asr: "15:9",
+    Maghrib: "18: 20",
+    Isha: "19:50",
   });
   let [city, setCity] = useState({
     displayName: "القاهرة",
     apiName: "cairo",
   });
   let [today, setToday] = useState("");
+  let [hour, setHour] = useState("");
+  let [hijriDate, setHijriDate] = useState({});
   let [nextPrayerIndex, setNextPrayerIndex] = useState("0");
   let [remainTime, setRemainTime] = useState({});
   let prayersArray = [
@@ -38,11 +44,13 @@ export default function Allcontent() {
       `http://api.aladhan.com/v1/timingsByCity?city=${city.apiName}&country=EG&method=5`
     );
     setPrayerTimes(res.data.data.timings);
+    setHijriDate(res.data.data.date.hijri);
   };
   useEffect(() => {
     getData();
     let time = moment();
-    setToday(time.format("Do MMM YYYY | hh:mm"));
+    setToday(time.format("Do MMM YYYY"));
+    setHour(time.format("الوقت الأن hh:mm"));
   }, [city]);
 
   useEffect(() => {
@@ -86,7 +94,6 @@ export default function Allcontent() {
     const nextPrayerTime = prayerTimes[nextPrayerObject.key];
     const nextPrayerTimeMoment = moment(nextPrayerTime, "hh:mm");
     let remainingTime = moment(nextPrayerTime, "hh:mm").diff(momentNow);
-
     // Fajr difference time
     if (remainingTime < 0) {
       let midNightDiff = moment("23:59:59", "hh:mm:ss").diff(momentNow); // part 1
@@ -161,13 +168,16 @@ export default function Allcontent() {
 
       <div className="content">
         <Grid container>
-          <Grid xs={6}>
+          <Grid xs={5}>
             <div>
-              <p style={{ fontSize: "1.5rem" }}>{today}</p>
+              <p style={{ fontSize: "1.5rem" }}>
+                {today} |{"  "}
+                {`${hijriDate.day}  ${hijriDate.month.ar} ${hijriDate.year}`}
+              </p>
               <h1 style={{ color: "#999" }}>{city.displayName}</h1>
             </div>
           </Grid>
-          <Grid xs={6}>
+          <Grid xs={5}>
             <div>
               <p style={{ fontSize: "1.5rem" }}>
                 متبقي حتى اذان {prayersArray[nextPrayerIndex].displayName}{" "}
@@ -175,8 +185,13 @@ export default function Allcontent() {
               <p style={{ color: "#999", fontSize: "2rem" }}>
                 <span>{remainTime.seconds} : </span>
                 <span>{remainTime.minutes} : </span>
-                <span>{remainTime.hours}  </span>
+                <span>{remainTime.hours} </span>
               </p>
+            </div>
+          </Grid>
+          <Grid xs={2}>
+            <div>
+              <p style={{ fontSize: "1.5rem" }}>{hour}</p>
             </div>
           </Grid>
         </Grid>
@@ -201,19 +216,21 @@ export default function Allcontent() {
           />
           <Prayer
             name="العصر"
-            time={prayerTimes.Asr}
+            time={parseInt(prayerTimes.Asr) - 12 + prayerTimes.Asr.slice(2)}
             img="./src/assets/images/صورة-من-داخل-مسجد-بيازيد.jpg"
             active={nextPrayerIndex === 2}
           />
           <Prayer
             name="المغرب"
-            time={prayerTimes.Maghrib}
+            time={
+              parseInt(prayerTimes.Maghrib) - 12 + prayerTimes.Maghrib.slice(2)
+            }
             img="./src/assets/images/مسجد-كوكاتيب-أنقرة.jpg"
             active={nextPrayerIndex === 3}
           />
           <Prayer
             name="العشاء"
-            time={prayerTimes.Isha}
+            time={parseInt(prayerTimes.Isha) - 12 + prayerTimes.Isha.slice(2)}
             img="./src/assets/images/جامع-السليمانية.jpg"
             active={nextPrayerIndex === 4}
           />

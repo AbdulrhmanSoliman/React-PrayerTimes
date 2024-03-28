@@ -1,42 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Scheherazade+New:wght@400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 1rem;
+  font-family: "Rubik", sans-serif;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.heading {
+  font-weight: normal;
+  margin-bottom: 1rem;
+  color: white;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 767px) {
+  .heroImg {
+    display: none;
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.content {
+  padding: 1rem;
+  border: 1px solid #777;
+  border-radius: 10px;
+  color: white;
 }
-
-.card {
-  padding: 2em;
+#demo-simple-select-label {
+  font-family: "Rubik", sans-serif;
 }
-
-.read-the-docs {
-  color: #888;
+.MuiOutlinedInput-notchedOutline {
+  border-color: white !important;
+}
+.MuiSvgIcon-root,
+.MuiInputLabel-outlined,
+.MuiSelect-select {
+  color: white !important;
+  font-family: "Rubik", sans-serif !important;
+}
+.MuiButtonBase-root {
+  font-family: "Rubik", sans-serif !important;
+}
+.Mui-disabled {
+  cursor: no-drop !important;
+}
+.Mui-disabled .MuiOutlinedInput-notchedOutline,
+.Mui-disabled .MuiSvgIcon-root {
+  border-color: gray !important;
 }

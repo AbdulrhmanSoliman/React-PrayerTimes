@@ -7,3 +7,4 @@
 - Hijri date Added
 - Highlight the next upcoming prayer
 - Time coverted to 24 hours
+- Added new pictures

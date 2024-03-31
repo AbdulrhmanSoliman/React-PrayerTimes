@@ -18,7 +18,7 @@ export default function Allcontent() {
   // States
   let [prayerTimes, setPrayerTimes] = useState({
     Fajr: "4:20",
-    Dhuhr: "12:00",
+    Dhuhr: "11:55",
     Asr: "15:9",
     Maghrib: "18: 20",
     Isha: "19:50",
@@ -40,7 +40,7 @@ export default function Allcontent() {
   let [remainTime, setRemainTime] = useState({});
   let prayersArray = [
     { key: "Fajr", displayName: "الفجر" },
-    { key: "Duhur", displayName: "الظهر" },
+    { key: "Dhuhr", displayName: "الظهر" },
     { key: "Asr", displayName: "العصر" },
     { key: "Maghrib", displayName: "المغرب" },
     { key: "Isha", displayName: "العشاء" },

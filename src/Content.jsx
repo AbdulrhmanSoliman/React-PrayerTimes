@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import moment from "moment";
-import "moment/dist/locale/ar-dz";
+import "moment/dist/locale/ar-kw";
 moment.locale("ar");
 
 export default function Allcontent() {
